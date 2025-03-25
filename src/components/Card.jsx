@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({ common , png }) {
+function Card({ name , flag }) {
     return (
         <>
            
@@ -19,8 +19,8 @@ function Card({ common , png }) {
                     <img style={{
                         width: "100px",
                         textAlign: "center"
-                    }} src={png} />
-                    <h2>{common}</h2>
+                    }} src={flag} />
+                    <h2>{name}</h2>
                 </div>
             
 

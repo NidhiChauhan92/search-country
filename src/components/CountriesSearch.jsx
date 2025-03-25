@@ -51,7 +51,7 @@ function CountriesSearch() {
                     width: "480px",
                     height: "20px"
 
-                }} type="text" placeholder="Search Contry" value={search} onChange={(e) => setSearch(e.target.value)} />
+                }} type="text" placeholder="Search for Contries.." value={search} onChange={(e) => setSearch(e.target.value)} />
             </header>
             <div style={{
                 display: "flex",
@@ -63,7 +63,7 @@ function CountriesSearch() {
             }}>
 
                 {filteredCountries.map((item) => (
-                    <Card png={item.png} common={item.common} />
+                    <Card flag={item.png} name={item.common} />
                 ))}
             </div>
         </>
