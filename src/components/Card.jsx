@@ -1,32 +1,18 @@
-import React from "react";
+import React from 'react'
+import './Card.css';
 
-function Card({ name , flag }) {
-    return (
-        <>
-           
-                <div style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    border: "2px solid black",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    textAlign: "center",
-                    borderRadius: "5px",
-                    height: "200px",
-                    width: "200px",
-
-                }}>
-                    <img style={{
-                        width: "100px",
-                        textAlign: "center"
-                    }} src={flag} />
-                    <h2>{name}</h2>
-                </div>
-            
-
-        </>
-    )
-
+const Card = ({ item }) => {
+    
+  return (
+    <div className='countryCard'>
+        <div className='country-image'>
+            <img src={item.png} alt={item.common.toLowerCase()} />        
+        </div>
+        <div className='content'>
+            <h3>{item.common}</h3>
+        </div>
+    </div>
+  )
 }
 
-export default Card;
+export default Card

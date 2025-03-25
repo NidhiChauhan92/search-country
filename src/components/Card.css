@@ -1,0 +1,33 @@
+.countryCard {
+    width: 250px;
+    height: auto;
+    padding: 10px;
+    margin: 2px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .country-image {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .country-image img {
+    max-width: 90%;      /* Scale down the image to 90% of the container's width */
+    max-height: 90%;     /* Scale down the image to 90% of the container's height */
+    object-fit: contain; /* Ensure the full flag is visible without cropping */
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
