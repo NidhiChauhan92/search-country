@@ -28,9 +28,10 @@ function CountriesSearch() {
 
     // console.log(countries);
 
-    const filteredCountries = countries.filter(country =>
-        country.name?.common?.toLowerCase().includes(search.toLowerCase())
+    const filteredCountries = countries.filter((country) => 
+        search.trim() === "" || country.name?.common?.toLowerCase().includes(search.toLowerCase())
     );
+    
 
       console.log(filteredCountries);
     return (
