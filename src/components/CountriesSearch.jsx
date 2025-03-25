@@ -29,7 +29,7 @@ function CountriesSearch() {
     // console.log(countries);
 
     const filteredCountries = countries.filter((country) => 
-        search.trim() === "" || country.name?.common?.toLowerCase().includes(search.toLowerCase())
+        search.trim() === "" || country.common?.toLowerCase().includes(search.toLowerCase())
     );
     
 
@@ -63,8 +63,8 @@ function CountriesSearch() {
 
             }}>
                {filteredCountries.length > 0 ? (
-        filteredCountries.map((item, index) => (
-            <Card key={index} flag={item.flags?.png} name={item.name?.common} />
+        filteredCountries.map((item) => (
+            <Card flag={item.png} name={item.common} />
         ))
     ) : (
         <p className="no-results">No results found</p>
