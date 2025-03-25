@@ -53,7 +53,7 @@ function CountriesSearch() {
 
                 }} type="text" placeholder="Search for Contries.." value={search} onChange={(e) => setSearch(e.target.value)} />
             </header>
-            <div style={{
+            <div className="countryCard" style={{
                 display: "flex",
                 flexWrap: "wrap",
                 gap: "10px",
