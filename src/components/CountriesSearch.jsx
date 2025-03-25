@@ -13,7 +13,7 @@ function CountriesSearch() {
 
     const api = "https://countries-search-data-prod-812920491762.asia-south1.run.app/countries";
 
-   
+
 
     useEffect(() => {
         fetch(api) // API URL
@@ -30,8 +30,8 @@ function CountriesSearch() {
 
     const filteredCountries = countries.filter(country =>
         country.common?.toLowerCase().includes(search.toLowerCase())
-      );
-      
+    );
+
     //   console.log(filteredCountries);
     return (
         <>
@@ -61,12 +61,15 @@ function CountriesSearch() {
                 marginTop: "30px"
 
             }}>
-                if(!filteredCountries.length === 0){
-                     {filteredCountries.map((item) => (
+                {filteredCountries.length === 0 ? (
+                   <span></span>
+
+                ) : (
+                    filteredCountries.map((item) => (
                         <Card flag={item.png} name={item.common} />
-                    ))}
-                }
-               
+                    ))
+                )}
+
             </div>
         </>
 
