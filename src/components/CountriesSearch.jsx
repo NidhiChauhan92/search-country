@@ -61,10 +61,12 @@ function CountriesSearch() {
                 marginTop: "30px"
 
             }}>
-
-                {filteredCountries.map((item) => (
-                    <Card flag={item.png} name={item.common} />
-                ))}
+                if(!filteredCountries.length === 0){
+                     {filteredCountries.map((item) => (
+                        <Card flag={item.png} name={item.common} />
+                    ))}
+                }
+               
             </div>
         </>
 
